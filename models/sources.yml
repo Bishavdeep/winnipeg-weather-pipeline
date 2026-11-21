@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: raw_data
+    database: WINNIPEG_WEATHER_DB
+    schema: raw_data
+    tables:
+      - name: raw_weather_json

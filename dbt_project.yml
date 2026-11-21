@@ -1,0 +1,24 @@
+name: 'winnipeg_weather_dbt'
+version: '1.0.0'
+config-version: 2
+
+profile: 'default'
+
+# Where dbt looks for each type of file
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+# IMPORTANT: this key must exactly match the 'name' field above
+models:
+  winnipeg_weather_dbt:
+    +schema: analytics
+    +materialized: table

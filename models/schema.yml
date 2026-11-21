@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: stg_daily_weather
+    description: "Daily weather summary for Winnipeg, extracted from Open-Meteo API"
+    columns:
+      - name: weather_date
+        description: "The date of the weather observation"
+        tests:
+          - unique
+          - not_null
+      
+      - name: max_temp_celsius
+        description: "Maximum temperature in Celsius"
+        tests:
+          - not_null
+      
+      - name: min_temp_celsius
+        description: "Minimum temperature in Celsius"
+        tests:
+          - not_null
