@@ -3,3 +3,8 @@
 .env
 data/
 .venv
+__pycache__/
+*.json
+*.log
+target/
+dbt_packages/
